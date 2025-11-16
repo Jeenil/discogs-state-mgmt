@@ -11,13 +11,9 @@ Built this project on the idea of **declarative state**. The `my_collection.json
 ## Repo Structure
 
 ```
-.
-├── .github/workflows/
-│   └── sync-collection.yml   # The GitHub Action workflow
 ├── .gitignore                # Ignores config and log files
 ├── config.json               # (Local only) Your secret credentials
 ├── my_collection.json        # Your desired state (this is what you edit)
-├── my_collection_log.json    # (Bot-managed) Log of all adds/deletes
 ├── Sync-Collection.ps1       # The main PowerShell sync script
 └── README.md                 # This file
 ```
