@@ -1,0 +1,35 @@
+name: Sync Discogs Collection
+
+# Trigger the workflow ONLY when the state file changes
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "my_collection.json"
+  # Allows you to run it manually from the Actions tab for testing
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: windows-latest
+
+    steps:
+      # 1. Download your code
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Recreate config.json securely using the secrets you added
+      - name: Create Config File
+        run: |
+          $configContent = @{
+            username = "${{ secrets.DISCOGS_USERNAME }}"
+            token    = "${{ secrets.DISCOGS_TOKEN }}"
+          }
+          $configContent | ConvertTo-Json | Out-File -FilePath config.json -Encoding utf8
+        shell: powershell
+
+      # 3. Run the Sync Script
+      - name: Run Sync Engine
+        run: .\Sync-Collection.ps1
+        shell: powershell
