@@ -1,11 +1,13 @@
 [CmdletBinding()]
-param ()
+param (
+    $ConfigFilePath = "$PSScriptRoot\config.json",
 
-# --- Configuration ---
-$ConfigFilePath = "$PSScriptRoot\config.json"
-$StateFilePath = "$PSScriptRoot\my_collection.json"
-$FolderId = 1 
-$UserAgent = "MyPowerShellCollectionScript/18.0"
+    $StateFilePath = "$PSScriptRoot\my_collection.json",
+
+    $FolderId = 1 ,
+    
+    $UserAgent = "MyPowerShellCollectionScript/1.0"
+)
 
 try {
     # 1. Setup
