@@ -4,7 +4,7 @@ This repository uses a declarative, Git-based workflow to manage a Discogs recor
 
 Instead of manually clicking buttons on the Discogs website, you manage a single JSON file (`my_collection.json`) that represents your desired state. You push changes to this file, and the scripts handle the API interactions to make your Discogs collection match your file.
 
-## 🧠 The Concept
+## The Concept
 
 This project is built on the idea of **declarative state**. The `my_collection.json` file is the "Single Source of Truth."
 
@@ -24,7 +24,7 @@ This project is built on the idea of **declarative state**. The `my_collection.j
 └── README.md                 # Project documentation
 ```
 
-## 🚀 Setup
+## Setup
 
 1.  **Clone the Repo:**
 
@@ -103,7 +103,7 @@ This project is configured with GitHub Actions. When you push changes to `my_col
 - **Trigger:** Push to `main` (specifically `my_collection.json`).
 - **Secrets Required:** `DISCOGS_USERNAME`, `DISCOGS_TOKEN`.
 
-## 🤓 Technical Concepts: Why HashMaps?
+## Technical Concepts: Why HashMaps?
 
 To make the sync script fast and efficient, we use specific data structures.
 
