@@ -1,6 +1,6 @@
-name: Sync Discogs Collection
+name: ci-cd
 
-# Trigger the workflow ONLY when the state file changes
+# Trigger the workflow ONLY when the state file changes on main
 on:
   push:
     branches:
