@@ -1,4 +1,4 @@
-name: ci-cd
+name: Sync Discogs Collection
 
 # Trigger the workflow ONLY when the state file changes on main
 on:
