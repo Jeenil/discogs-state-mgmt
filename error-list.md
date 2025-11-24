@@ -6,4 +6,9 @@
       "artist": "Taylor Swift",
       "notes": "Evermore (Barcode: 602435651279)"
     },
+    {
+      "id": 25056949,
+      "artist": "Lee Fields",
+      "notes": "Faithful Man (Barcode: 119964001814)"
+    },
 ```
